@@ -2,9 +2,9 @@
 
 ```npm i npsedhain/navigation-panel#[tag-name or version]```
 
-## To use this import this to any component
+## To use this import to any component as
 
-```import 'navigation-panel';```
+```import '@npsedhain/navigation-panel/navigation-panel';```
 
 ## DEMO 
 
