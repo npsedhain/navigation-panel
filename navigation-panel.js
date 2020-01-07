@@ -1,6 +1,8 @@
 import { nothing } from 'lit-html';
 import { html, css, LitElement } from 'lit-element';
 
+const SIDEBAR = 'sidebar';
+
 /**
  * Navigation panel for the landing page.
  * `<navigation-panel>`
@@ -94,10 +96,41 @@ class NavigationPanel extends LitElement {
    */
   static get properties() {
     return {
+      /**
+       * Boolean value to control the display of the side bar.
+       */
       isSideBarOpen: { type: Boolean },
+      /**
+       * The function to close the sidebar.
+       */
       handleCloseSidebar: { type: Function },
+      /**
+       * The urls to be implemented in the menu bar.
+       */
       routes: { type: Object },
+      /**
+       * The navigation links for the urls.
+       */
       navigation: { type: Object }
+    };
+  }
+
+  /**
+   * Constructor to initialize the props.
+   */
+  constructor() {
+    super();
+
+    this.routes = {
+      HIT_RESYNTHESIS: '',
+      DEL_SCREENING: '',
+      PROTEIN_PRODUCTION: ''
+    };
+
+    this.navigation = {
+      protein_production: '',
+    hit_resynthesis: '',
+    del_screening: ''
     };
   }
 
@@ -107,7 +140,7 @@ class NavigationPanel extends LitElement {
    * @param {Object} event
    */
   closeSideBar(event) {
-    if (event.target.id === 'sidebar') {
+    if (event.target.id === SIDEBAR) {
       return;
     }
 
@@ -137,7 +170,7 @@ class NavigationPanel extends LitElement {
         @click=${this.closeSideBar}
         class="overlay ${this.isSideBarOpen ? 'dp-block' : 'dp-none'}"
       ></div>
-      <div id="sidebar" class="sidebar ${this.isSideBarOpen ? 'show' : 'hide'}">
+      <div id="${SIDEBAR}" class="sidebar ${this.isSideBarOpen ? 'show' : 'hide'}">
         <ul>
           <li class="${this.setActiveClass(this.routes.HIT_RESYNTHESIS)}">
             <a router-link href="${this.navigation.hit_resynthesis}"
