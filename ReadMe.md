@@ -1,6 +1,6 @@
 ## Install this with the command 
 
-```npm i npsedhain/navigation-panel#master```
+```npm i npsedhain/navigation-panel#[tag-name or version]```
 
 ## To use this import this to any component
 
