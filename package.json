@@ -1,0 +1,23 @@
+{
+  "name": "navigation-panel",
+  "version": "1.0.0",
+  "description": "This is a simple navigation panel for an app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npsedhain/navigation-panel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npsedhain/navigation-panel/issues"
+  },
+  "homepage": "https://github.com/npsedhain/navigation-panel#readme",
+  "dependencies": {
+    "lit-element": "^2.2.1",
+    "lit-html": "^1.1.2"
+  }
+}
