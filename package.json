@@ -1,6 +1,6 @@
 {
-  "name": "navigation-panel",
-  "version": "1.0.0",
+  "name": "@npsedhain/navigation-panel",
+  "version": "1.0.1",
   "description": "This is a simple navigation panel for an app.",
   "main": "index.js",
   "scripts": {
